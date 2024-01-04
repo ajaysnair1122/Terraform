@@ -11,12 +11,12 @@ variable "region" {
 
 variable "access_key" {
   default = "XXXXXXXXXXXXXX"
-  description = "project access key"
+  description = "access key"
 }
 
 variable "secret_key" {
   default = "XXXXXXXXXXXXXXXXXXXXXXXX"
-  description = "project secret key"
+  description = "secret key"
 }
 
 variable "instance_ami" {
