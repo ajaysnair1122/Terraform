@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "my-igw" {
 
 
 resource "aws_route_table" "my-rt" {
-  vpc_id = aws_vpc.example.id
+  vpc_id = aws_vpc.my-vpc.id
 
   route {
     cidr_block = "0.0.0.0/0"
