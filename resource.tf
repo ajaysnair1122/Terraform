@@ -10,7 +10,7 @@ resource "aws_key_pair" "mathanga" {
   public_key = tls_private_key.mathanga.public_key_openssh
   provisioner "local-exec" {
  
-    command = "echo '${tls_private_key.mathanga.private_key_openssh}' > ./MT-ssh_key ; chmod 400 ./test-key"
+    command = "echo '${tls_private_key.mathanga.private_key_openssh}' > ./test-key ; chmod 400 ./test-key"
  
   }
  
