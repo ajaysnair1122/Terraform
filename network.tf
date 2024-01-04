@@ -29,6 +29,7 @@ resource "aws_route_table" "my-rt" {
 
 
 resource "aws_route_table_association" "my-rt" {
+  count          = local.subnet_count
   subnet_id      = aws_subnet.subnet[count.index].id
   route_table_id = aws_route_table.my-rt.id
 }
