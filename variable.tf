@@ -11,12 +11,12 @@ variable "region" {
 
 variable "access_key" {
   default = "AKIAZWMMVPJNPHAIZD4M"
-  description = project access key
+  description = "project access key"
 }
 
 variable "secret_key" {
   default = "vIUVAnqL4PlV3dFmriKHUFQluC/kO+2zFerYsl7S"
-  description = project secret key
+  description = "project secret key"
 }
 
 variable "instance_ami" {
@@ -33,7 +33,7 @@ locals {
 
 variable "vpc_cidr" {
   default = "172.32.0.0/16"
-  description = cidr block to create vpc
+  description = "cidr block to create vpc"
 }
 
 locals {
