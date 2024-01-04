@@ -15,6 +15,25 @@ resource "aws_internet_gateway" "my-igw" {
 }
 
 
+resource "aws_route_table" "my-rt" {
+  vpc_id = aws_vpc.example.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.my-igw.id
+  }
+  tags = {
+    Name = "my-rt"
+  }
+}
+
+
+resource "aws_route_table_association" "my-rt" {
+  subnet_id      = aws_subnet.subnet[count.index].id
+  route_table_id = aws_route_table.my-rt.id
+}
+
+
 resource "aws_subnet" "subnet" {
   count                   = local.subnet_count
   vpc_id                  = aws_vpc.my-vpc.id
