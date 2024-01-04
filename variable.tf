@@ -10,12 +10,12 @@ variable "region" {
 }
 
 variable "access_key" {
-  default = "AKIAZWMMVPJNPHAIZD4M"
+  default = "XXXXXXXXXXXXXX"
   description = "project access key"
 }
 
 variable "secret_key" {
-  default = "vIUVAnqL4PlV3dFmriKHUFQluC/kO+2zFerYsl7S"
+  default = "XXXXXXXXXXXXXXXXXXXXXXXX"
   description = "project secret key"
 }
 
