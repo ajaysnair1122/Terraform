@@ -4,7 +4,7 @@ resource "tls_private_key" "mathanga" {
 }
 
 
-resource "aws_key_pair" "my_key" {
+resource "aws_key_pair" "mathanga" {
  
   key_name   = "test-key"  
   public_key = tls_private_key.mathanga.public_key_openssh
